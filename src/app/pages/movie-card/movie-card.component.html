@@ -1,0 +1,12 @@
+<div class="movie-card">
+  <h2>{{ movie.Title }}</h2>
+  <div class="movie-details">
+    <img [src]="movie.Poster" alt="{{movie.Title}}" class="poster">
+    <div class="info">
+      <p><strong>Director:</strong> {{ movie.Director }}</p>
+      <p><strong>Release Date:</strong> {{ movie.Released }}</p>
+      <p><strong>Genre:</strong> {{ movie.Genre }}</p>
+      <p><strong>Plot:</strong> {{ movie.Plot }}</p>
+    </div>
+  </div>
+</div>

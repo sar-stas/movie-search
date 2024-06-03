@@ -1,0 +1,29 @@
+.movie-card {
+  margin: 20px 0;
+
+  .movie-details {
+    display: flex;
+    flex-wrap: wrap;
+
+    .poster {
+      max-width: 100%;
+      margin-right: 20px;
+    }
+
+    .info {
+      flex: 1;
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .movie-details {
+      flex-direction: column;
+      .poster {
+        margin: 0 auto 20px;
+      }
+    }
+  }
+}

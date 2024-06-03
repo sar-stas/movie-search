@@ -1,0 +1,17 @@
+<div class="search-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Search for a movie</mat-label>
+    <input matInput (input)="onSearch($event)" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelect($event.option.value)">
+      <mat-option *ngFor="let movie of movies" [value]="movie.imdbID">
+        <img [src]="movie.Poster" alt="{{movie.Title}}" class="poster-thumb">
+        {{movie.Title}} ({{movie.Year}}) - {{movie.Director}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
+
+<div *ngIf="selectedMovie">
+  <app-movie-card [movie]="selectedMovie"></app-movie-card>
+</div>
+
