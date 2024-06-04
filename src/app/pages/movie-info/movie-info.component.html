@@ -1,28 +1,24 @@
 <div>
   <mat-toolbar class="toolbar">
     <a [routerLink]="''">
-      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"/>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
     </a>
   </mat-toolbar>
 </div>
 
 <div class="movie-card">
+  <h2>{{ movie?.Title }}</h2>
   <img [src]="movie?.Poster" alt="{{movie?.Title}}" class="poster">
-  <div>
-    <h2>{{ movie?.Title }}</h2>
-
-    <div class="info">
-      <span class="d-flex">About the film</span>
-      <p class="d-flex"><strong>Director:</strong> {{ movie?.Director }}</p>
-      <p><strong>Release Date:</strong> {{ movie?.Released }}</p>
-      <p><strong>Country:</strong> {{ movie?.Country  }}</p>
-      <p><strong>Genre:</strong> {{ movie?.Genre }}</p>
-      <p><strong>Director:</strong> {{ movie?.Director  }}</p>
-      <p><strong>Writer:</strong> {{ movie?.Writer  }}</p>
-      <p><strong>IMDB Rating:</strong> {{ movie?.imdbRating  }}</p>
-      <p><strong>IMDB Votes Rating:</strong> {{ movie?.imdbVotes }}</p>
-      <p><strong>Plot:</strong> {{ movie?.Plot }}</p>
-    </div>
+  <div class="info">
+    <span class="d-flex">About the film</span>
+    <p class="d-flex"><strong>Director:</strong> {{ movie?.Director }}</p>
+    <p><strong>Release Date:</strong> {{ movie?.Released }}</p>
+    <p><strong>Country:</strong> {{ movie?.Country }}</p>
+    <p><strong>Genre:</strong> {{ movie?.Genre }}</p>
+    <p><strong>Director:</strong> {{ movie?.Director }}</p>
+    <p><strong>Writer:</strong> {{ movie?.Writer }}</p>
+    <p><strong>IMDB Rating:</strong> {{ movie?.imdbRating }}</p>
+    <p><strong>IMDB Votes Rating:</strong> {{ movie?.imdbVotes }}</p>
+    <p><strong>Plot:</strong> {{ movie?.Plot }}</p>
   </div>
-
 </div>
