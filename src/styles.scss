@@ -33,18 +33,8 @@ img{
 }
 .wrapper{
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: var(--dark-color);
   display: flex;
   justify-content: center;
 }
-
-.container {
-  //display: flex;
-  //width: 1200px;
-  //justify-content: center;
-}
-
-//h1,h2,h3,h4,h5,h6, p, span {
-//  color: #FFFFFF;
-//}

@@ -6,9 +6,10 @@
       <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelect($event.option.value)">
         <mat-option *ngFor="let movie of movies" [value]="movie.imdbID">
           <div class="movie-short">
-            <img [src]="movie.Poster" alt="{{movie.Title}}" class="movie-short-poster">
-            <div class="movie-short-info">
-              <b>{{movie.Title}}</b> ({{movie.Year}}) - {{movie.Type}}
+            <div class="movie-short-title"><b>{{movie.Title}}</b></div>
+            <div class="movie-short-details">
+              <img [src]="movie.Poster" alt="{{movie.Title}}" class="movie-short-poster">
+              <div class="movie-short-year-type">{{movie.Year}} - {{movie.Type}}</div>
             </div>
           </div>
         </mat-option>

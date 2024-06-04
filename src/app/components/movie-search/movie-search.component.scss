@@ -1,12 +1,19 @@
+.mat-mdc-option {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--light-dark-color);
+}
 .search-container {
   display: flex;
   justify-content: center;
   padding: 10px;
-  width: 100%
+  width: 80vw;
 }
 
 .search-inner-container {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
 .mat-form-field {
@@ -15,65 +22,81 @@
 
 .movie-short {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
   align-items: center;
   gap: 10px;
+}
 
-  &-poster {
-    width: 50px;
-    height: auto;
-  }
+.movie-short-title {
+  font-size: 16px;
+}
 
-  &-info {
-    font-size: 16px;
-  }
+.movie-short-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.movie-short-poster {
+  width: 50px;
+  height: auto;
+}
+
+.movie-short-year-type {
+  font-size: 16px;
 }
 
 @media (min-width: 600px) {
   .movie-short {
-    &-poster {
-      width: 70px;
-    }
-
-    &-info {
-      font-size: 18px;
-    }
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
   }
 
-  .mat-form-field {
-    width: 70%;
+  .movie-short-title {
+    font-size: 18px;
+    grid-column: 1 / -1;
+  }
+
+  .movie-short-details {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .movie-short-poster {
+    width: 70px;
+  }
+
+  .movie-short-year-type {
+    font-size: 18px;
   }
 }
 
 @media (min-width: 768px) {
-  .movie-short {
-    &-poster {
-      width: 90px;
-    }
-
-    &-info {
-      font-size: 20px;
-    }
+  .movie-short-title {
+    font-size: 20px;
   }
 
-  .mat-form-field {
-    width: 80%;
+  .movie-short-poster {
+    width: 90px;
   }
 
+  .movie-short-year-type {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1024px) {
-  .movie-short {
-    &-poster {
-      width: 100px;
-    }
-
-    &-info {
-      font-size: 22px;
-    }
+  .movie-short-title {
+    font-size: 22px;
   }
 
-  .mat-form-field {
-    width: 100%;
+  .movie-short-poster {
+    width: 100px;
+  }
+
+  .movie-short-year-type {
+    font-size: 22px;
   }
 }
